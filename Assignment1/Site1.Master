@@ -1,0 +1,71 @@
+﻿<!--Creating by Daniel Di Giambattista (100038157)
+Date: 27/05/2015
+Purpose: Assignment #1, Create a game calculator -->
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Assignment1.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Game Calculator</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Styles from bootstrap, did not use my CSS page as I just used the syles from Bootstrap.
+        Added everything in the <body> to move with the users screen, added lots of class components
+        throughout default.aspx -->
+
+    <!-- Link to style sheet -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"/>
+
+    <!--jquery CDN -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    <!-- Basic Header and Footer -->
+</head>
+<body>
+    <header class="alert alert-info">
+        <h1>Game Calculator</h1>
+        <h4>All fields are required. No ties or draws are allowed.</h4>
+        <!--Javascript for pop up instruction box-->
+        <button class="btn-sm" onclick="myFunction()">Instructions</button>
+        <script>
+            function myFunction() {
+                alert("INSTRUCTIONS \n > Start at Game 1 \n > Choose the Result \n > Enter Points Scored \n > Enter Allowed Points \n > Enter the Amount of Spectators. \n > Fill in the Remaining Games and Press Summary \n > The Results of your input are displayed under Results. \n\n Enjoy!:) \n\n\n RULES \n > All Fields Are Required \n > No Ties Or Draws Allowed ");
+            }
+        </script>
+    </header>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    
+
+    <footer class="alert alert-info">
+        <h4>Share This Game!</h4>
+        <!--Shair Buttons-->
+        <div class="share-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fassign1-100038157..azurewebsites.net&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="images/Facebook.png"/></a>
+  <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fassign1-100038157..azurewebsites.net&text=:%20http%3A%2F%2Fassignment1..azurewebsites.net" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="images/Twitter.png"/></a>
+  <a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fassign1-100038157..azurewebsites.net&t=&s=" target="_blank" title="Post to Tumblr" onclick="window.open('http://www.tumblr.com/share?v=3&u=' + encodeURIComponent(document.URL) + '&t=' +  encodeURIComponent(document.title)); return false;"><img src="images/Tumblr.png"/></a>
+  <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fassign1-100038157..azurewebsites.net&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/Reddit.png"/></a>
+  <a href="mailto:?subject=&body=:%20http%3A%2F%2Fassign1-100038157..azurewebsites.net" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="images/Email.png"/></a>
+</div><br />
+        @100038157 - Game Calculator
+    </footer>
+</body>
+</html>
